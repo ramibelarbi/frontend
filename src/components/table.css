@@ -1,0 +1,147 @@
+table{
+  margin: 20px 0 0 0px;
+  float: center;
+}
+
+.user-table {
+  border-collapse: collapse;
+  position: relative;
+  max-width: 2500px !important;
+  padding: 40px 40px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(34, 0, 56, 0.09);
+  transition-duration: .3s;
+  overflow: hidden;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  width: 100%;
+  height: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 2px solid #666;
+}
+
+th {
+  background-color: #00396b;
+  color: whitesmoke;
+}
+
+tr:nth-child(even) {
+  background-color: #ffffff
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+.button-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  margin-top: -60px;
+}
+
+.centered-table {
+  border-collapse: collapse;
+  position: relative;
+  max-width: 2500px !important;
+  padding: 40px 40px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(34, 0, 56, 0.09);
+  transition-duration: .3s;
+  overflow: hidden;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  width: 100%;
+  height: 100%;
+  margin-left: 3%;
+  text-align: center;
+}
+
+.boutton {
+  display: inline-block;
+  padding: 0.8rem 1.9rem;
+  color: #fff !important;
+  background-color: #2e44a8;
+  border-radius: 12px;
+  text-transform: capitalize;
+  transition: 0.3s;
+  cursor: pointer;
+  border: 2px solid #EDEDED;
+  font-size: 16px;
+}
+
+.boutton:hover {
+  background-color: #3a56d4;
+  transform: scale(1) !important;
+  color: #fff !important;
+}
+
+.search-container input::-webkit-input-placeholder {
+  font-size: 12px;
+  line-height: 4; 
+}
+
+.search-container input::-webkit-input-value {
+  font-size: 12px;
+  line-height: 4; 
+}
+
+.search-container .spinner-border .spinner-border-sm {
+  border-color: #642583 ;
+}
+.table-controls {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.add-button {
+  margin-right: 1rem;
+  margin-top: 90px;
+  margin-left: 370px;
+  background-color: #28a745;
+}
+
+.table-controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.search {
+  margin-right: 1rem;
+  margin-top: 90px;
+}
+.button-container button {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.span1 {
+  display: flex;
+  align-items: center;
+}
+
+h3 {
+  margin-right: 1rem;
+}
+
+.boutton1 {
+  padding: 0.4rem 1rem;
+  color: #fff !important;
+  background-color: #2e44a8;
+  border-radius: 12px;
+  text-transform: capitalize;
+  transition: 0.3s;
+  cursor: pointer;
+  border: 1px solid #EDEDED;
+  width: auto;
+  height: auto;
+}
