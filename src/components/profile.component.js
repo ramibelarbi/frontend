@@ -4,7 +4,7 @@ import AuthService from "../services/AuthenticationService";
 import UserService from "../services/UserService";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus, faTrashAlt } from '@fortawesome/free-solid-svg-icons'
-const API_URL = 'http://localhost:8081';
+const API_URL = process.env.REACT_APP_API_URL;
 
 export default class Profile extends Component {
   constructor(props) {

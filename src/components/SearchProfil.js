@@ -3,7 +3,7 @@ import { Navigate } from "react-router-dom";
 import UserService from "../services/UserService";
 import SearchBar from "./search";
 import axios from 'axios';
-const API_URL = 'http://localhost:8081';
+const API_URL = process.env.REACT_APP_API_URL;
 function SearchProfile() {
   const [searchText, setSearchText] = useState("");
   const [redirect, setRedirect] = useState("");

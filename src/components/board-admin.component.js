@@ -15,7 +15,7 @@ const loadUsers = async () => {
     headers: { Authorization: `Bearer ${token}` }
   };
   try {
-    const result = await axios.get("http://localhost:8081/user", config);
+    const result = await axios.get(process.env.REACT_APP_API_URL +"/user", config);
     return result.data;
   } catch (error) {
     console.log(error);
@@ -124,7 +124,7 @@ function UserTable() {
       };
     
       try {
-        const result = await axios.put(`http://localhost:8081/user/${user.id}`, newUser, config);
+        const result = await axios.put(process.env.REACT_APP_API_URL +`/user/${user.id}`, newUser, config);
         window.location.reload()
       } catch (error) {
         console.log(error);
@@ -143,7 +143,7 @@ function UserTable() {
       headers: { Authorization: `Bearer ${token}` }
     };
     try {
-      await axios.delete(`http://localhost:8081/user/${user.id}`, { ...config, data: user });
+      await axios.delete(process.env.REACT_APP_API_URL +`/user/${user.id}`, { ...config, data: user });
       const index = users.findIndex(u => u.id === user.id);
       users.splice(index, 1);
       setUsers([...users]);

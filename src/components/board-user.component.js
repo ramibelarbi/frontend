@@ -79,7 +79,7 @@ const CertificateTable = () => {
     };
   
     try {
-      const result = await axios.put(`http://localhost:8081/certificates/${certif.id}`, newCertif, config);
+      const result = await axios.put(process.env.REACT_APP_API_URL + `/certificates/${certif.id}`, newCertif, config);
       console.log("1");
       const response = result.data;
       window.location.reload()
@@ -100,7 +100,7 @@ const CertificateTable = () => {
       headers: { Authorization: `Bearer ${token}` }
     };
     try {
-      await axios.delete(`http://localhost:8081/certificates/${certif.id}`, config); 
+      await axios.delete(process.env.REACT_APP_API_URL +`/certificates/${certif.id}`, config); 
       const index = certificates.findIndex(c => c.id === certif.id); 
       certificates.splice(index, 1);
       setCertificates([...certificates]);
