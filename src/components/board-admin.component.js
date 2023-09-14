@@ -137,6 +137,12 @@ function UserTable() {
   }
 
   const handleDeleteUser = async (user) => {
+    const confirmDelete = window.confirm('Warning: You are deleting a user. Do you want to proceed?');
+
+  if (!confirmDelete) {
+    // If the user clicks "Cancel," do nothing
+    return;
+  }
     const userString = localStorage.getItem('user');
     const token = JSON.parse(userString).token;
     const config = {
