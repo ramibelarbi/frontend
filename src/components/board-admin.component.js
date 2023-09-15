@@ -58,7 +58,7 @@ function UserTable() {
         console.log(error);
       });
     }
-  }, [searchTerm]);
+  }, [searchTerm]); // eslint-disable-line react-hooks/exhaustive-deps
 
   if (!isAdminUser()) {
     return <div>You are not authorized to access this page.</div>

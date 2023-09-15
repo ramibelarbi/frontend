@@ -76,7 +76,7 @@ class App extends Component {
           </div>
           {currentUser ? (
             <div className="navbar-nav ml-auto">
-              <Link to={"/search-profile?email=${searchText}"} className="nav-link">
+              <Link to={`/search-profile?email=${searchText}`} className="nav-link">
                   Search 
                 </Link>
               <li className="nav-item">

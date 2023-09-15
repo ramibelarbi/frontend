@@ -82,7 +82,7 @@ function SearchProfile() {
     else {
       setShowTable(true);
     }
-  }, [searchText,searchType]);
+  }, [searchText,searchType]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     async function fetchData() {
