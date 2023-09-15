@@ -10,8 +10,6 @@ import { BrowserRouter as Router } from 'react-router-dom';
 const CertificateTable = () => {
   const [certificates, setCertificates] = useState([]);
   const [selectedCertif, setSelectedCertif] = useState(null);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [filteredCertif, setFilteredCertif] = useState([]);
   const [editedName, setEditedName] = useState('');
   const [editedDesc, setEditedDesc] = useState('');
   const [editedExpiration, setEditedExpiration] = useState('');
@@ -81,7 +79,7 @@ const CertificateTable = () => {
     try {
       const result = await axios.put(process.env.REACT_APP_API_URL + `/certificates/${certif.id}`, newCertif, config);
       console.log("1");
-      const response = result.data;
+      console.log(result);
       window.location.reload()
     } catch (error) {
       console.log(error);

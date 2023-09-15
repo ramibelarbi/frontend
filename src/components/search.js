@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 function SearchBar(props) {
   const [searchText, setSearchText] = useState("");
   const [searchType, setSearchType] = useState("");
-  const [searchPerformed, setSearchPerformed] = useState(false);
+  const [setSearchPerformed] = useState(false);
   const navigate = useNavigate();
 
   const handleSearch = () => {

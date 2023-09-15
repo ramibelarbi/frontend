@@ -34,8 +34,8 @@ const isAdminUser = () => {
 function UserTable() {
   const [users, setUsers] = useState([]);
   const [selectedUser, setSelectedUser] = useState(null);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [filteredUsers, setFilteredUsers] = useState([]);
+  const [searchTerm] = useState('');
+  const [setFilteredUsers] = useState([]);
   const [editedFirstName, setEditedFirstName] = useState('');
   const [editedLastName, setEditedLastName] = useState('');
   const [editedEmail, setEditedEmail] = useState('');
@@ -125,11 +125,11 @@ function UserTable() {
     
       try {
         const result = await axios.put(process.env.REACT_APP_API_URL +`/user/${user.id}`, newUser, config);
-        window.location.reload()
+        console.log(result);
+        window.location.reload();
       } catch (error) {
         console.log(error);
       }
-      
     }
 
   const handleCancelEdit = () => {

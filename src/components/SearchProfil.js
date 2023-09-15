@@ -11,7 +11,7 @@ function SearchProfile() {
   const [searchuser, setsearchuser] = useState({});
   const [certificates, setCertificates] = useState([]);
   const [documents, setDocuments] = useState([]);
-  const [photo, setPhoto] = useState("");
+  const [setPhoto] = useState("");
   const [showTable, setShowTable] = useState(true);
   const [users, setUsers] = useState([]);
   const [searchType, setSearchType] = useState("");

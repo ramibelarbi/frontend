@@ -12,7 +12,6 @@ import BoardAdmin from "./components/board-admin.component";
 import ForgotPassword from "./components/forgot-password";
 import AddUser from "./components/addUser";
 import AddCertificateForm from "./components/addCertification";
-import SearchBar from "./components/search";
 import SearchProfile from "./components/SearchProfil";
 import imageSrc from './images/LOGO_0003_WHITE-&-ORANGE.png';
 
