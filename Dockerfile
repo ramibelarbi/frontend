@@ -1,5 +1,5 @@
-# Use Node.js version 14 as the base image
-FROM node:17
+# Use Node.js version 17 as the base image
+FROM node:17 AS builder
 
 # Set the working directory in the container
 WORKDIR /app
@@ -16,8 +16,17 @@ COPY . .
 # Build the React app
 RUN npm run build
 
-# Expose a port (usually 80 for HTTP servers)
-EXPOSE 80
+# Stage 2: Create the runtime image
+FROM node:17
 
-# Define the command to run your application
+# Set the working directory in the runtime container
+WORKDIR /app
+
+# Copy the production build from the builder stage
+COPY --from=builder /app/build ./build
+
+# Expose a port (e.g., 3000 for Node.js)
+EXPOSE 3000
+
+# Define the command to run your Node.js server (replace with your actual start command)
 CMD ["npm", "start"]
